@@ -8,7 +8,8 @@ target 'Architecture' do
   pod 'Masonry'
   pod 'SDWebImage'
   pod 'MJRefresh'
-
+  pod 'RongCloudIM/IMLib'
+  pod 'RongCloudIM/IMKit'
   target 'ArchitectureTests' do
     inherit! :search_paths
     # Pods for testing

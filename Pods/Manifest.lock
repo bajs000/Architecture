@@ -1,6 +1,9 @@
 PODS:
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
+  - RongCloudIM/IMKit (2.8.10):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.8.10)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -9,15 +12,18 @@ PODS:
 DEPENDENCIES:
   - Masonry
   - MJRefresh
+  - RongCloudIM/IMKit
+  - RongCloudIM/IMLib
   - SDWebImage
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  RongCloudIM: 654e9893b94f6e5a085e832335532ed2a8ea5930
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 99661c0aeec1b445a0aa66f5fe765aacccc9aafd
+PODFILE CHECKSUM: 6048d791ed41caaea2bbbc2b42cca9f07d3dac85
 
 COCOAPODS: 1.2.1
