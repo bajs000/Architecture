@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.avatarBg.layer.cornerRadius = 43;
+    self.avatarImg.layer.cornerRadius = 40;
 }
 
 - (void)viewWillAppear:(BOOL)animated{

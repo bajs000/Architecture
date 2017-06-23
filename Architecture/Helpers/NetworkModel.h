@@ -14,3 +14,9 @@
 + (void)requestWithUrl:(NSString *)url param:(NSDictionary *)param complete:(void(^)(NSDictionary *))complete;
 
 @end
+
+@interface UploadNetworkModel : NSObject
+
++ (void)uploadWithUrl:(NSString *)url param:(NSDictionary *)param data:(id)data dataName:(NSString *)dataName complete:(void(^)(NSDictionary *))complete;
+
+@end

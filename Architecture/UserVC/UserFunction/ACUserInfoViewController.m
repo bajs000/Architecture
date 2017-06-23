@@ -7,6 +7,7 @@
 //
 
 #import "ACUserInfoViewController.h"
+#import "Helpers.h"
 
 @interface ACUserInfoViewController ()
 
@@ -19,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.avatar.layer.cornerRadius = 30;
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -28,6 +29,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:false animated:true];
+    [self.avatar sd_setImageWithURL:[NSURL URLWithString:[UserModel shareInstance].avatarUrl]];
+    self.userName.text = [UserModel shareInstance].userName;
 }
 
 #pragma mark - Table view data source

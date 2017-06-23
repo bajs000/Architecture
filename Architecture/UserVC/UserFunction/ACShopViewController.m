@@ -24,7 +24,8 @@
     titleArr = @[@{@"title":@"店铺名称",@"detail":@"",@"placeholder":@"请输入店铺名称",@"keyboardType":[NSNumber numberWithInteger:UIKeyboardTypeDefault]},
                  @{@"title":@"姓   名",@"detail":@"",@"placeholder":@"请输入姓名",@"keyboardType":[NSNumber numberWithInteger:UIKeyboardTypeDefault]},
                  @{@"title":@"联系电话",@"detail":@"",@"placeholder":@"请输入联系电话",@"keyboardType":[NSNumber numberWithInteger:UIKeyboardTypeNumberPad]},
-                 @{@"title":@"主营范围",@"detail":@"",@"placeholder":@"",@"keyboardType":@""}];
+                 @{@"title":@"主营范围",@"detail":@"",@"placeholder":@"",@"keyboardType":@""},
+                 @{@"title":@"店铺logo",@"detail":@"",@"placeholder":@"",@"keyboardType":@""}];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

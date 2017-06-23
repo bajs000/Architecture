@@ -136,15 +136,16 @@ static UserModel *user = nil;
 - (void)resetAll{
     _userId = nil;
     _phone = nil;
-    [self resetAvatar];
+    _avatarUrl = nil;
     _passwordMD5 = nil;
     [self resetUserName];
     _time = nil;
     _shakey = nil;
 }
 
-- (void)resetAvatar{
+- (void)resetAvatar:(NSString *)url{
     _avatarUrl = nil;
+    [[NSUserDefaults standardUserDefaults] setObject:url forKey:@"AVATARURL"];
 }
 
 - (void)resetUserName{

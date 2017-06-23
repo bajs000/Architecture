@@ -8,7 +8,7 @@
 
 #import "NetworkModel.h"
 #import "Helpers.h"
-//#import <AFNetWorking/AFNetWorking.h>
+#import "AFNetworking/AFNetworking.h"
 
 @implementation NetworkModel
 
@@ -44,3 +44,38 @@
 }
 
 @end
+
+@implementation UploadNetworkModel
+
++ (void)uploadWithUrl:(NSString *)url param:(NSDictionary *)param data:(id)data dataName:(NSString *)dataName complete:(void(^)(NSDictionary *))complete{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
+    NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithDictionary:param];
+    [tempDic setObject:@"1.1" forKey:@"version"];
+    [tempDic setObject:@"f74dd39951a0b6bbed0fe73606ea5476" forKey:@"apikey"];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    [manager POST:[NSString stringWithFormat:@"%@%@",Main_Url,url] parameters:tempDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+        dateformatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *timeName = [[dateformatter stringFromDate:[NSDate date]] stringByAppendingString:@".jpg"];
+        NSData *imgData = UIImageJPEGRepresentation((UIImage *)data, 0.2);
+        [formData appendPartWithFileData:imgData name:dataName fileName:timeName mimeType:@"image/jpg"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        [SVProgressHUD showProgress:uploadProgress.fractionCompleted];
+        if (uploadProgress.fractionCompleted >= 1) {
+            [SVProgressHUD dismiss];
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+        complete(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+        NSLog(@"%@",error);
+        [SVProgressHUD showErrorWithStatus:@"网络问题"];
+    }];
+}
+
+
+@end
+

@@ -22,7 +22,7 @@
 + (void)saveUserInfoWithDic:(NSDictionary *)dic;
 
 - (void)resetAll;
-- (void)resetAvatar;
+- (void)resetAvatar:(NSString *)url;
 - (void)resetUserName;
 
 @end

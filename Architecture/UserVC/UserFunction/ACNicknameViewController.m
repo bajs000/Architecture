@@ -7,8 +7,11 @@
 //
 
 #import "ACNicknameViewController.h"
+#import "Helpers.h"
 
 @interface ACNicknameViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *nickname;
 
 @end
 
@@ -16,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.nickname.text = [UserModel shareInstance].userName;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +41,17 @@
 
 #pragma mark - UIButton Action
 - (IBAction)save:(id)sender {
-    
+    [SVProgressHUD show];
+    [NetworkModel requestWithUrl:@"User/unameedit" param:@{@"user_id":[UserModel shareInstance].userId,@"user_name":_nickname.text} complete:^(NSDictionary *dic) {
+        if ([dic[@"code"] intValue] == 200) {
+            [SVProgressHUD showSuccessWithStatus:@"修改成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.navigationController popToRootViewControllerAnimated:true];
+            });
+        }else{
+            [SVProgressHUD showErrorWithStatus:dic[@"msg"]];
+        }
+    }];
 }
 
 

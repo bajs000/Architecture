@@ -7,6 +7,7 @@
 //
 
 #import "ACAvatarViewController.h"
+#import "Helpers.h"
 
 @interface ACAvatarViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
@@ -18,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.avatar.layer.cornerRadius = 58.5;
+    [self.avatar sd_setImageWithURL:[NSURL URLWithString:[UserModel shareInstance].avatarUrl]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,8 +44,19 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    [self.navigationItem setHidesBackButton:true];
     self.avatar.image = info[UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:true completion:nil];
+    [UploadNetworkModel uploadWithUrl:@"User/faceedit" param:@{@"user_id":[UserModel shareInstance].userId} data:self.avatar.image dataName:@"face" complete:^(NSDictionary *dic) {
+        if ([dic[@"code"] intValue] == 200) {
+            [SVProgressHUD showSuccessWithStatus:@"修改成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.navigationController popToRootViewControllerAnimated:true];
+            });
+        }else{
+            [SVProgressHUD showErrorWithStatus:dic[@"msg"]];
+        }
+    }];
 }
 
 /*
