@@ -10,6 +10,7 @@ target 'Architecture' do
   pod 'MJRefresh'
   pod 'RongCloudIM/IMLib'
   pod 'RongCloudIM/IMKit'
+  pod 'AFNetworking'
   target 'ArchitectureTests' do
     inherit! :search_paths
     # Pods for testing
