@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <RongIMKit/RongIMKit.h>
+#import "Helpers.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface AppDelegate ()
 
@@ -16,11 +19,49 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[RCIM sharedRCIM] initWithAppKey:RongCloudKey];
+    //注册推送, 用于iOS8以及iOS8之后的系统
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings
+                                            settingsForTypes:(UIUserNotificationTypeBadge |
+                                                              UIUserNotificationTypeSound |
+                                                              UIUserNotificationTypeAlert)
+                                            categories:nil];
+    [application registerUserNotificationSettings:settings];
     
-    // Override point for customization after application launch.
+    [SVProgressHUD setMinimumDismissTimeInterval:1];
+    
     return YES;
 }
 
+//注册用户通知设置
+- (void)application:(UIApplication *)application
+didRegisterUserNotificationSettings:
+(UIUserNotificationSettings *)notificationSettings {
+    // register to receive notifications
+    [application registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *token =
+    [[[[deviceToken description] stringByReplacingOccurrencesOfString:@"<"
+                                                           withString:@""]
+      stringByReplacingOccurrencesOfString:@">"
+      withString:@""]
+     stringByReplacingOccurrencesOfString:@" "
+     withString:@""];
+    
+    [[RCIMClient sharedRCIMClient] setDeviceToken:token];
+    [Helpers getUserTokenWithUserId:@"1" name:@"1" avatar:@"http://p1.wmpic.me/article/2016/08/15/1471251423_hgPqiEeX.jpg"/*@"http://pic.wenwen.soso.com/p/20111117/20111117224109-1750539119.jpg"*/ complete:^(NSString *token) {
+        [[RCIMClient sharedRCIMClient] connectWithToken:token success:^(NSString *userId) {
+            NSLog(@"%@",userId);
+        } error:^(RCConnectErrorCode status) {
+            
+        } tokenIncorrect:^{
+            
+        }];
+    }];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -29,18 +70,17 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 

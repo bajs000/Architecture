@@ -30,6 +30,10 @@
     return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, _left, 0, _right));
 }
 
+- (CGRect)textRectForBounds:(CGRect)bounds{
+    return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, _left, 0, _right));
+}
+
 @end
 
 @implementation ACPhoneTextFiled

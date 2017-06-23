@@ -62,7 +62,24 @@
 }
 
 - (IBAction)login:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
+    if (self.phoneNum.text.length != 11) {
+        [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
+        return;
+    }
+    if (self.password.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入密码"];
+        return;
+    }
+    [SVProgressHUD show];
+    [NetworkModel requestWithUrl:@"Login" param:@{@"phone":self.phoneNum.text,@"pass":self.password.text} complete:^(NSDictionary *dic) {
+        if ([dic[@"code"] intValue] == 200) {
+            [SVProgressHUD dismiss];
+            [UserModel saveUserInfoWithDic:dic[@"uinfo"]];
+            [self dismissViewControllerAnimated:true completion:nil];
+        }else{
+            [SVProgressHUD showErrorWithStatus:dic[@"msg"]];
+        }
+    }];
 }
 
 - (IBAction)regist:(id)sender {

@@ -10,6 +10,7 @@
 #import "ACKindViewController.h"
 #import "ACMainCell.h"
 #import "Helpers.h"
+#import <RongIMKit/RongIMKit.h>
 
 @interface ACMainViewController ()
 
@@ -110,6 +111,12 @@
 
 - (IBAction)searhBtnDidClick:(id)sender {
     [[UIApplication sharedApplication].keyWindow endEditing:true];
+    RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
+    conversationVC.hidesBottomBarWhenPushed = true;
+    conversationVC.conversationType = ConversationType_PRIVATE;
+    conversationVC.targetId = @"2";
+    conversationVC.title = @"想显示的会话标题";
+    [self.navigationController pushViewController:conversationVC animated:YES];
 }
 
 
