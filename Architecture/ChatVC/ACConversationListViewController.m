@@ -44,14 +44,10 @@
 
 - (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *))completion{
     RCUserInfo *user = [[RCUserInfo alloc] init];
-    if ([userId  isEqual: @"1"]) {
+    if ([userId  isEqual: [UserModel shareInstance].userId]) {
         user.userId = userId;
-        user.name = @"test1";
-        user.portraitUri = @"http://pic.wenwen.soso.com/p/20111117/20111117224109-1750539119.jpg";
-    }else if ([userId  isEqual: @"2"]) {
-        user.userId = userId;
-        user.name = @"test2";
-        user.portraitUri = @"http://p1.wmpic.me/article/2016/08/15/1471251423_hgPqiEeX.jpg";
+        user.name = [UserModel shareInstance].userName;
+        user.portraitUri = [UserModel shareInstance].avatarUrl;
     }
     return completion(user);
 }

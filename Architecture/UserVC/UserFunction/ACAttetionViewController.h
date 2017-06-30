@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ACAttetionViewController : UITableViewController
+typedef enum : NSUInteger {
+    AttentionTypeKind,
+    AttentionTypeMine,
+} AttentionType;
+
+@interface ACAttetionViewController : UIViewController
+
+@property (nonatomic, assign) AttentionType type;
+@property (nonatomic, strong) NSDictionary *typeInfo;
 
 @end

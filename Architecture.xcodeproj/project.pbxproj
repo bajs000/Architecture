@@ -16,6 +16,9 @@
 		661258DE1EF908CD00B0C776 /* ACShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661258DD1EF908CD00B0C776 /* ACShopViewController.m */; };
 		661258E11EF9105C00B0C776 /* ACAttetionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661258E01EF9105C00B0C776 /* ACAttetionViewController.m */; };
 		661258E41EF9135F00B0C776 /* ACStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661258E31EF9135F00B0C776 /* ACStoreViewController.m */; };
+		668D8B111F05DF50002E57A8 /* ACLogisticsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D8B101F05DF50002E57A8 /* ACLogisticsListViewController.m */; };
+		668D8B141F05E8CA002E57A8 /* ACLogisticsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668D8B131F05E8CA002E57A8 /* ACLogisticsDetailViewController.m */; };
+		668E89011F04EF150002465D /* ACGoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668E89001F04EF150002465D /* ACGoodsDetailViewController.m */; };
 		66C272E11EFB9C56003CB5B3 /* ACConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C272E01EFB9C56003CB5B3 /* ACConversationListViewController.m */; };
 		66C272E41EFBBE62003CB5B3 /* ACConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C272E31EFBBE62003CB5B3 /* ACConversationViewController.m */; };
 		66D869C91EF7A5ED0014B5D3 /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D869C81EF7A5ED0014B5D3 /* ACMainViewController.m */; };
@@ -83,6 +86,12 @@
 		661258E01EF9105C00B0C776 /* ACAttetionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAttetionViewController.m; sourceTree = "<group>"; };
 		661258E21EF9135F00B0C776 /* ACStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoreViewController.h; sourceTree = "<group>"; };
 		661258E31EF9135F00B0C776 /* ACStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoreViewController.m; sourceTree = "<group>"; };
+		668D8B0F1F05DF50002E57A8 /* ACLogisticsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACLogisticsListViewController.h; sourceTree = "<group>"; };
+		668D8B101F05DF50002E57A8 /* ACLogisticsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACLogisticsListViewController.m; sourceTree = "<group>"; };
+		668D8B121F05E8CA002E57A8 /* ACLogisticsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACLogisticsDetailViewController.h; sourceTree = "<group>"; };
+		668D8B131F05E8CA002E57A8 /* ACLogisticsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACLogisticsDetailViewController.m; sourceTree = "<group>"; };
+		668E88FF1F04EF150002465D /* ACGoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACGoodsDetailViewController.h; sourceTree = "<group>"; };
+		668E89001F04EF150002465D /* ACGoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACGoodsDetailViewController.m; sourceTree = "<group>"; };
 		66C272DF1EFB9C56003CB5B3 /* ACConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConversationListViewController.h; sourceTree = "<group>"; };
 		66C272E01EFB9C56003CB5B3 /* ACConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConversationListViewController.m; sourceTree = "<group>"; };
 		66C272E21EFBBE62003CB5B3 /* ACConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConversationViewController.h; sourceTree = "<group>"; };
@@ -266,6 +275,8 @@
 				66D869DF1EF7CCE60014B5D3 /* ACKindViewController.m */,
 				66D869EE1EF8CA670014B5D3 /* ACKindSortViewController.h */,
 				66D869EF1EF8CA670014B5D3 /* ACKindSortViewController.m */,
+				668E88FF1F04EF150002465D /* ACGoodsDetailViewController.h */,
+				668E89001F04EF150002465D /* ACGoodsDetailViewController.m */,
 			);
 			path = ListVC;
 			sourceTree = "<group>";
@@ -275,6 +286,10 @@
 			children = (
 				66D869E21EF8AEFA0014B5D3 /* ACLogisticsViewController.h */,
 				66D869E31EF8AEFA0014B5D3 /* ACLogisticsViewController.m */,
+				668D8B0F1F05DF50002E57A8 /* ACLogisticsListViewController.h */,
+				668D8B101F05DF50002E57A8 /* ACLogisticsListViewController.m */,
+				668D8B121F05E8CA002E57A8 /* ACLogisticsDetailViewController.h */,
+				668D8B131F05E8CA002E57A8 /* ACLogisticsDetailViewController.m */,
 			);
 			path = Logistics;
 			sourceTree = "<group>";
@@ -670,11 +685,13 @@
 				661258E11EF9105C00B0C776 /* ACAttetionViewController.m in Sources */,
 				66D869E01EF7CCE60014B5D3 /* ACKindViewController.m in Sources */,
 				66FF2C371EF76FA500103902 /* AppDelegate.m in Sources */,
+				668D8B111F05DF50002E57A8 /* ACLogisticsListViewController.m in Sources */,
 				66FF2C341EF76FA500103902 /* main.m in Sources */,
 				661258D41EF8FD2D00B0C776 /* ACLoginViewController.m in Sources */,
 				66F092301EFCC5500051B816 /* NetworkModel.m in Sources */,
 				660C83861EF916C000812833 /* ACUserInfoViewController.m in Sources */,
 				66D869D91EF7B6CC0014B5D3 /* ACMainSortCell.m in Sources */,
+				668D8B141F05E8CA002E57A8 /* ACLogisticsDetailViewController.m in Sources */,
 				660C83891EF91A0D00812833 /* ACAvatarViewController.m in Sources */,
 				66C272E11EFB9C56003CB5B3 /* ACConversationListViewController.m in Sources */,
 				66C272E41EFBBE62003CB5B3 /* ACConversationViewController.m in Sources */,
@@ -686,6 +703,7 @@
 				66D869CF1EF7A7EE0014B5D3 /* ACMainKindCell.m in Sources */,
 				66D869E41EF8AEFA0014B5D3 /* ACLogisticsViewController.m in Sources */,
 				66D869CC1EF7A63D0014B5D3 /* ACMainAdCell.m in Sources */,
+				668E89011F04EF150002465D /* ACGoodsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,1312 @@
+{
+	"id": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+	"name": "建材展示线上",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"owner": "1540173",
+			"lastUpdatedBy": "1540173",
+			"lastRevision": 1637690250,
+			"folder": null,
+			"id": "7261ce11-613a-234a-46e3-be54cb90d28c",
+			"name": "会员类",
+			"description": "",
+			"order": [
+				"7dfbf040-f5f3-0d1d-a6e6-7a369c92bf2e",
+				"adb83289-9ccb-6267-f028-6c9a4754642c",
+				"01f5f818-a34d-dc41-cf0e-d2946bf5cbfc",
+				"8ba4ec43-0660-c4d5-ae73-238c11ee40eb",
+				"7a4c36d5-b986-c4fa-54db-09c5ce7dcd66",
+				"76e9c3a4-fc97-3de2-a1c0-72d6e69f7a1d",
+				"6e7484c4-09a9-46cc-1a47-e7f58ca5f273",
+				"ce42b3d3-a507-b39b-05cf-0a4f7491cb44",
+				"72fa53bd-0d43-22a7-eed1-9e88bc290a85",
+				"ca8787a1-e1ef-8ce2-4541-c08869f678be"
+			]
+		},
+		{
+			"owner": "1540173",
+			"lastUpdatedBy": "1540173",
+			"lastRevision": 1639264397,
+			"folder": null,
+			"id": "563e49a0-5d84-2c48-f22c-39aca2303f4e",
+			"name": "关注类",
+			"description": "",
+			"order": [
+				"11625ece-56f8-bc6b-802f-7ab4f3260f61",
+				"d6832f5a-c000-d708-dba6-c70e45c15ccb",
+				"d16e3c3c-e6de-1a8c-d12a-10bd9f91b3c1"
+			],
+			"collectionId": "a4d56784-5fdb-2950-e30f-747d3b87ac0a"
+		},
+		{
+			"owner": "1540173",
+			"lastUpdatedBy": "1540173",
+			"lastRevision": 1639264397,
+			"folder": null,
+			"id": "2611ee40-87c3-dc73-c3ba-a27d2d5462d1",
+			"name": "咨询类",
+			"description": "",
+			"order": [
+				"925d4804-1268-061e-5ee5-a9a52a176996"
+			],
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"owner": "1540173",
+			"lastUpdatedBy": "1540173",
+			"lastRevision": 1639264397,
+			"folder": null,
+			"id": "bad4625f-2123-6614-d9b1-7e5b2e5bad49",
+			"name": "收藏类",
+			"description": "",
+			"order": [
+				"1d812ae3-c99c-f1e7-e4ab-3437bf2ff988",
+				"c9dc9db3-e936-edec-e580-9fe310877462",
+				"0be58138-1a62-3340-0947-68704dcc59f5"
+			],
+			"collectionId": "a4d56784-5fdb-2950-e30f-747d3b87ac0a"
+		},
+		{
+			"owner": "1540173",
+			"lastUpdatedBy": "1540173",
+			"lastRevision": 1639103148,
+			"folder": null,
+			"id": "fa11e98d-34f6-ec5c-6e1f-70c93d818086",
+			"name": "显示类",
+			"description": "",
+			"order": [
+				"d92cf3fe-635c-db90-4f87-19ee4b42ae98",
+				"23326ccb-59b4-b01c-d0fa-44f54e914f78",
+				"e9f08fc4-e992-29bb-64a0-3491ef58330b",
+				"e924974b-2c9b-fe62-e818-0022ce967d1a",
+				"c07d1086-c210-d6dc-dc73-3293ecd80bb3",
+				"57c994a6-648c-e130-9297-5586365ec830"
+			]
+		},
+		{
+			"owner": "1540173",
+			"lastUpdatedBy": "1540173",
+			"lastRevision": 1639264397,
+			"folder": null,
+			"id": "a01cd742-3c57-ae1f-2806-8890685330ec",
+			"name": "物流类",
+			"description": "",
+			"order": [
+				"29ae55bc-78e4-fa69-d0e1-c70d144137d1",
+				"39fd9db8-0e22-fee2-5940-49057c8b9957",
+				"b8ba363c-40a6-2b7b-efe8-1f3727736666"
+			],
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		}
+	],
+	"timestamp": 1497923130342,
+	"owner": "1540173",
+	"public": false,
+	"requests": [
+		{
+			"id": "01f5f818-a34d-dc41-cf0e-d2946bf5cbfc",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Register/register_yzm",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phone",
+					"value": "15696154320",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497924203091,
+			"name": "获取注册验证",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "0be58138-1a62-3340-0947-68704dcc59f5",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/shoucang_del",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "goods_id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498178760905,
+			"name": "删除收藏",
+			"description": "id：收藏id",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "bad4625f-2123-6614-d9b1-7e5b2e5bad49"
+		},
+		{
+			"id": "11625ece-56f8-bc6b-802f-7ab4f3260f61",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/guanzhu_add",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498125273045,
+			"name": "添加关注",
+			"description": "user_id：用户id；\nbus_id：商家id",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "563e49a0-5d84-2c48-f22c-39aca2303f4e"
+		},
+		{
+			"id": "1d812ae3-c99c-f1e7-e4ab-3437bf2ff988",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/shoucang_add",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "goods_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498178732848,
+			"name": "添加收藏",
+			"description": "user_id：用户id；\nalbum_id：相册id",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "bad4625f-2123-6614-d9b1-7e5b2e5bad49"
+		},
+		{
+			"id": "23326ccb-59b4-b01c-d0fa-44f54e914f78",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/type_list",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type_id",
+					"value": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498468982375,
+			"name": "获取分类",
+			"description": "type_id：分类id，传入分类id得到该分类下子分类",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"id": "29ae55bc-78e4-fa69-d0e1-c70d144137d1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Express",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "page",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"description": "页码"
+				},
+				{
+					"key": "express_name",
+					"value": "物流",
+					"type": "text",
+					"enabled": true,
+					"description": "搜索--物流名称，不搜索传空值"
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498636252461,
+			"name": "物流首页",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"id": "39fd9db8-0e22-fee2-5940-49057c8b9957",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Express/express_dot",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "express_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"description": "物流首页分类id"
+				},
+				{
+					"key": "page",
+					"value": "1",
+					"description": "页码",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498636316044,
+			"name": "物流列表",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"id": "57c994a6-648c-e130-9297-5586365ec830",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/goods_details",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "goods_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498182992288,
+			"name": "商品详情",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "fa11e98d-34f6-ec5c-6e1f-70c93d818086"
+		},
+		{
+			"id": "6e7484c4-09a9-46cc-1a47-e7f58ca5f273",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/User/unameedit",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_name",
+					"value": "老大",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497926343845,
+			"name": "修改昵称",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "72fa53bd-0d43-22a7-eed1-9e88bc290a85",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/User/kaidian",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_title",
+					"value": "店铺名称",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_username",
+					"value": "店主姓名",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_phone",
+					"value": "15600000000",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_type",
+					"value": "1:2:3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_logo",
+					"value": "",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498124210825,
+			"name": "申请开店",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "76e9c3a4-fc97-3de2-a1c0-72d6e69f7a1d",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/User",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497926190871,
+			"name": "会员中心",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "7a4c36d5-b986-c4fa-54db-09c5ce7dcd66",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Register/pwd_wjedit",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phone",
+					"value": "15696154320",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pass",
+					"value": "123456",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497924987872,
+			"name": "找回密码",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "7dfbf040-f5f3-0d1d-a6e6-7a369c92bf2e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Login",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phone",
+					"value": "15696154320",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pass",
+					"value": "123456",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497924684891,
+			"name": "登陆",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "8ba4ec43-0660-c4d5-ae73-238c11ee40eb",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Register/gain_yzm",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phone",
+					"value": "15696154320",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497925040627,
+			"name": "找回密码获取验证码",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "925d4804-1268-061e-5ee5-a9a52a176996",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Chat/cloud_toke",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498638924178,
+			"name": "获取融云",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"id": "adb83289-9ccb-6267-f028-6c9a4754642c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Register",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phone",
+					"value": "15696154320",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pass",
+					"value": "123456",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497924388595,
+			"name": "注册",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "b8ba363c-40a6-2b7b-efe8-1f3727736666",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Express/express_details",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "dot_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"description": "物流id"
+				},
+				{
+					"key": "page",
+					"value": "1",
+					"description": "推荐物流的页码",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498638422032,
+			"name": "物流详情",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"id": "c07d1086-c210-d6dc-dc73-3293ecd80bb3",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/bus_list",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "page",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "zuixin",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498468969019,
+			"name": "店铺列表",
+			"description": "type_id：分类id；\npage：页码；\nzuixin：0时间升序，1倒序",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"id": "c9dc9db3-e936-edec-e580-9fe310877462",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/shoucang_list",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498178725877,
+			"name": "收藏列表",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "bad4625f-2123-6614-d9b1-7e5b2e5bad49"
+		},
+		{
+			"id": "ca8787a1-e1ef-8ce2-4541-c08869f678be",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/User/kaidian_list",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497939861491,
+			"name": "申请开店列表",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "7261ce11-613a-234a-46e3-be54cb90d28c"
+		},
+		{
+			"id": "ce42b3d3-a507-b39b-05cf-0a4f7491cb44",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/User/faceedit",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "face",
+					"value": "Penguins.jpg",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498208389591,
+			"name": "修改头像",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"id": "d16e3c3c-e6de-1a8c-d12a-10bd9f91b3c1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/guanzhu_del",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498125470794,
+			"name": "删除关注",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "563e49a0-5d84-2c48-f22c-39aca2303f4e"
+		},
+		{
+			"id": "d6832f5a-c000-d708-dba6-c70e45c15ccb",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/guanzhu_list",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498125536926,
+			"name": "关注列表",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "563e49a0-5d84-2c48-f22c-39aca2303f4e"
+		},
+		{
+			"id": "d92cf3fe-635c-db90-4f87-19ee4b42ae98",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "page",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498196943358,
+			"name": "首页",
+			"description": "ac：zuixin：最新,remen：热门;\npage：分页页码；",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		},
+		{
+			"id": "e924974b-2c9b-fe62-e818-0022ce967d1a",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/bus_details",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "page",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type_id",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "price_s",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sales",
+					"value": "sales_s",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498182255558,
+			"name": "店铺首页",
+			"description": "page：翻页；\ntype_id：分类id；\nprice：价格排序，price_s：价格升序，price_j：价格降序；\nsales：销量排序，sales_s：销量升序，sales_j：销量降序；",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c",
+			"folder": "fa11e98d-34f6-ec5c-6e1f-70c93d818086"
+		},
+		{
+			"id": "e9f08fc4-e992-29bb-64a0-3491ef58330b",
+			"headers": "",
+			"headerData": [],
+			"url": "http://jiancai.cq1b1.com/api.php/Public/type_bus",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "version",
+					"value": "1.1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "f74dd39951a0b6bbed0fe73606ea5476",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bus_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498468977381,
+			"name": "获取店铺分类",
+			"description": "",
+			"collectionId": "d71a79bb-099f-1a2f-708f-5968f632b14c"
+		}
+	]
+}

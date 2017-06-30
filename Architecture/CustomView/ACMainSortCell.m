@@ -25,9 +25,14 @@
     [super setSelected:selected animated:animated];
 }
 
+- (void)setDataSource:(NSArray *)dataSource{
+    [super setDataSource:dataSource];
+    [self.collectionView reloadData];
+}
+
 #pragma mark- UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 4;
+    return self.dataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -41,6 +46,9 @@
     }else if (indexPath.row == 3) {
         cell.contentView.backgroundColor = UIColorFromHex(0xdfe7f3);
     }
+    NSDictionary *dic = self.dataSource[indexPath.row];
+    [(UIImageView *)[cell viewWithTag:1] sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Image_Url,dic[@"img"]]]];
+    [(UILabel *)[cell viewWithTag:2] setText:dic[@"title"]];
     return cell;
 }
 

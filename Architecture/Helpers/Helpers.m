@@ -8,6 +8,7 @@
 
 #import "Helpers.h"
 #import <CommonCrypto/CommonCrypto.h>
+#import <RongIMKit/RongIMKit.h>
 
 @implementation Helpers
 
@@ -71,6 +72,42 @@ static Helpers *helpers = nil;
             complete(dic[@"token"]);
         }
     }];
+}
+
++ (nullable UIView *)findSuperViewClass:(Class)class view:(UIView *)view{
+    UIView *superView = nil;
+    superView = view;
+    for (int i = 0; i < 10; i++) {
+        superView = superView.superview;
+        if ([superView isKindOfClass:class]) {
+            return superView;
+        }
+    }
+    return nil;
+}
+
++ (void)registRongCloud{
+    if ([UserModel shareInstance].userId.length > 0) {
+        [NetworkModel requestWithUrl:@"Chat/cloud_toke" param:@{@"user_id":[UserModel shareInstance].userId} complete:^(NSDictionary *dic) {
+            if ([dic[@"code"] intValue] == 200) {
+                if (dic[@"user_face"] && [dic[@"user_face"] isKindOfClass:[NSString class]]) {
+                    [[UserModel shareInstance] resetAvatar:dic[@"user_face"]];
+                }
+                if (dic[@"user_name"] && [dic[@"user_name"] isKindOfClass:[NSString class]]) {
+                    [[UserModel shareInstance] resetAvatar:dic[@"user_name"]];
+                }
+                [[RCIMClient sharedRCIMClient] connectWithToken:dic[@"token"] success:^(NSString *userId) {
+                    NSLog(@"%@",userId);
+                } error:^(RCConnectErrorCode status) {
+                    
+                } tokenIncorrect:^{
+                    
+                }];
+            }else{
+                
+            }
+        }];
+    }
 }
 
 @end

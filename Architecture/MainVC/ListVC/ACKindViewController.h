@@ -16,5 +16,7 @@ typedef enum : NSUInteger {
 @interface ACKindViewController : UIViewController
 
 @property (nonatomic, assign) ListType type;
+@property (nonatomic, strong) NSDictionary *typeInfo;
+@property (nonatomic, strong) NSString *typeId;
 
 @end

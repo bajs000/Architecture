@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^completeChose)(NSDictionary *);
 @interface ACKindSortViewController : UICollectionViewController
+
+@property (nonatomic, strong) NSDictionary *typeInfo;
+@property (nonatomic, copy) completeChose chose;
 
 @end

@@ -30,6 +30,8 @@
     
     [SVProgressHUD setMinimumDismissTimeInterval:1];
     
+    [Helpers registRongCloud];
+    
     return YES;
 }
 
@@ -52,15 +54,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
      withString:@""];
     
     [[RCIMClient sharedRCIMClient] setDeviceToken:token];
-    [Helpers getUserTokenWithUserId:@"1" name:@"1" avatar:@"http://p1.wmpic.me/article/2016/08/15/1471251423_hgPqiEeX.jpg"/*@"http://pic.wenwen.soso.com/p/20111117/20111117224109-1750539119.jpg"*/ complete:^(NSString *token) {
-        [[RCIMClient sharedRCIMClient] connectWithToken:token success:^(NSString *userId) {
-            NSLog(@"%@",userId);
-        } error:^(RCConnectErrorCode status) {
-            
-        } tokenIncorrect:^{
-            
-        }];
-    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

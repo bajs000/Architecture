@@ -61,6 +61,10 @@
     
 }
 
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
 - (IBAction)login:(id)sender {
     if (self.phoneNum.text.length != 11) {
         [SVProgressHUD showErrorWithStatus:@"请输入手机号"];

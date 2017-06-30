@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UserModel : NSObject
 
@@ -17,12 +18,15 @@
 @property (nonatomic, readonly) NSString *shakey;
 @property (nonatomic, readonly) NSString *time;
 @property (nonatomic, readonly) NSString *userName;
+@property (nonatomic, readonly) NSString *token;
 
 + (instancetype)shareInstance;
 + (void)saveUserInfoWithDic:(NSDictionary *)dic;
 
+- (void)checkOutLogin:(UIViewController *)vc;
+
 - (void)resetAll;
 - (void)resetAvatar:(NSString *)url;
-- (void)resetUserName;
+- (void)resetUserName:(NSString *)userName;
 
 @end

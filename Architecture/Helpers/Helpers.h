@@ -19,15 +19,53 @@
 #define Main_Url @"http://jiancai.cq1b1.com/api.php/"
 #define Image_Url @"http://jiancai.cq1b1.com/"
 
-#define RongCloudKey @"cpj2xarlc3hfn"
-#define RongCloudSecret @"sDYzkLV0O6htSQ"
+#define RongCloudKey @"c9kqb3rdcxarj"
+#define RongCloudSecret @"evSTCmOinoW"
+
+#ifndef weakify
+    #if DEBUG
+        #if __has_feature(objc_arc)
+        #define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+        #else
+        #define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+        #endif
+    #else
+        #if __has_feature(objc_arc)
+        #define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+        #else
+        #define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+        #endif
+    #endif
+#endif
+
+#ifndef strongify
+    #if DEBUG
+        #if __has_feature(objc_arc)
+        #define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+        #else
+        #define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+        #endif
+    #else
+        #if __has_feature(objc_arc)
+        #define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+        #else
+        #define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+        #endif
+
+
+    #endif
+#endif
 
 @interface Helpers : NSObject
 
-+ (void)item:(UITabBarItem *)tabItem title:(NSString *)title normalImg:(NSString *)normalImg selectImg:(NSString *)selectImg;
++ (void)item:(UITabBarItem *_Nullable)tabItem title:(NSString *_Nullable)title normalImg:(NSString *_Nullable)normalImg selectImg:(NSString *_Nullable)selectImg;
 
-+ (NSString*) sha1:(NSString *)hashString;
++ (NSString*_Nullable) sha1:(NSString *_Nullable)hashString;
 
-+ (void)getUserTokenWithUserId:(NSString *)userId name:(NSString *)name avatar:(NSString *)avatarUrl complete:(void(^)(NSString *))complete;
++ (void)getUserTokenWithUserId:(NSString *_Nullable)userId name:(NSString *_Nullable)name avatar:(NSString *_Nullable)avatarUrl complete:(void(^_Nullable)(NSString *_Nullable))complete;
+
++ (nullable UIView *)findSuperViewClass:(Class _Nullable )class view:(UIView *_Nullable)view;
+
++ (void)registRongCloud;
 
 @end

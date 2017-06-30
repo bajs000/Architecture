@@ -12,5 +12,6 @@
 @interface ACMainCell : UITableViewCell
 
 @property (nonatomic, weak) ACMainViewController *vc;
+@property (nonatomic, strong) NSArray *dataSource;
 
 @end

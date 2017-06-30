@@ -8,6 +8,7 @@
 
 #import "UserModel.h"
 #import "Helpers.h"
+#import "ACLoginViewController.h"
 
 @interface UserModel()
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) NSString *shakey;
 @property (nonatomic, strong) NSString *time;
 @property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *token;
 
 @end
 
@@ -44,6 +46,7 @@ static UserModel *user = nil;
     [userDefault setObject:dic[@"user_name"] forKey:@"USERNAME"];
     [userDefault setObject:dic[@"face"] forKey:dic[@"phone"]];
     [userDefault synchronize];
+    [Helpers registRongCloud];
 }
 
 - (NSString *)userId{
@@ -138,7 +141,7 @@ static UserModel *user = nil;
     _phone = nil;
     _avatarUrl = nil;
     _passwordMD5 = nil;
-    [self resetUserName];
+    _userName = nil;
     _time = nil;
     _shakey = nil;
 }
@@ -148,8 +151,16 @@ static UserModel *user = nil;
     [[NSUserDefaults standardUserDefaults] setObject:url forKey:@"AVATARURL"];
 }
 
-- (void)resetUserName{
+- (void)resetUserName:(NSString *)userName{
     _userName = nil;
+    [[NSUserDefaults standardUserDefaults] setObject:userName forKey:@"USERNAME"];
+}
+
+- (void)checkOutLogin:(UIViewController *)vc{
+    if (self.userId.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请登录"];
+        [vc presentViewController:[ACLoginViewController getInstance] animated:true completion:nil];
+    }
 }
 
 @end
