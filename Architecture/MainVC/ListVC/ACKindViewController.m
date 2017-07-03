@@ -54,7 +54,7 @@ static int page = 1;
         self.title = @"历史记录";
         currentParam = [NSMutableDictionary dictionaryWithDictionary:@{@"user_id":@"1",@"page":[NSString stringWithFormat:@"%d",page]}];
         self.topViewHeight.constant = 0;
-    }else if (_typeId == ListTypeKind){
+    }else if (_type == ListTypeKind){
         _topViewHeight.constant = 0;
         currentParam = [NSMutableDictionary dictionaryWithDictionary:@{@"bus_id":self.typeInfo[@"bus_id"],@"user_id":[UserModel shareInstance].userId,@"page":[NSString stringWithFormat:@"%d",page],@"type_id":_typeId}];
     }
