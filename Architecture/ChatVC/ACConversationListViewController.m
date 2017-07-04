@@ -12,6 +12,8 @@
 
 @interface ACConversationListViewController ()<RCIMUserInfoDataSource>
 
+@property (nonatomic, strong) NSMutableDictionary *dataSource;
+
 @end
 
 @implementation ACConversationListViewController
@@ -38,6 +40,12 @@
     self.title = @"咨询窗口";
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    _dataSource = [NSMutableDictionary dictionary];
+    [self requestConversation];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -60,7 +68,7 @@
     conversationVC.hidesBottomBarWhenPushed = true;
     conversationVC.conversationType = model.conversationType;
     conversationVC.targetId = model.targetId;
-    conversationVC.title = @"想显示的会话标题";
+    conversationVC.title = [(RCUserInfo *)_dataSource[model.targetId] name];
     [self.navigationController pushViewController:conversationVC animated:YES];
 }
 
@@ -73,5 +81,24 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)requestConversation{
+    [SVProgressHUD show];
+    [NetworkModel requestWithUrl:@"Public/zixunlist" param:@{} complete:^(NSDictionary *dic) {
+        if ([dic[@"code"] intValue] == 200) {
+            [SVProgressHUD dismiss];
+            for (NSDictionary *userInfo in dic[@"list"]) {
+                RCUserInfo *user = [[RCUserInfo alloc] initWithUserId:userInfo[@"user_id"] name:userInfo[@"user_name"] portrait:[NSString stringWithFormat:@"%@%@",Image_Url,userInfo[@"face"]]];
+                [[RCIM sharedRCIM] refreshUserInfoCache:user withUserId:userInfo[@"user_id"]];
+                [[RCIMClient sharedRCIMClient] setConversationToTop:ConversationType_PRIVATE targetId:userInfo[@"user_id"] isTop:true];
+                [_dataSource setObject:user forKey:userInfo[@"user_id"]];
+            }
+            [self refreshConversationTableViewIfNeeded];
+            [self.conversationListTableView reloadData];
+        }else{
+            [SVProgressHUD showErrorWithStatus:dic[@"msg"]];
+        }
+    }];
+}
 
 @end
